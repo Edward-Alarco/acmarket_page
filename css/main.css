@@ -1,0 +1,330 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+}
+
+header .menu-bar-pc {
+  min-height: 6rem;
+  font-size: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5rem;
+}
+header .menu-bar-pc a {
+  text-decoration: none;
+  color: #000;
+  margin-right: 1rem;
+  position: relative;
+  transition: all 0.4s ease;
+  padding-bottom: 0.5rem;
+}
+header .menu-bar-pc a:hover::before {
+  position: absolute;
+  content: "";
+  width: 25px;
+  height: 3px;
+  background: #4cd137;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+header .menu-bar-pc a:last-child {
+  margin-left: 0;
+}
+header .menu-bar-pc a h2 {
+  font-size: 1.8rem;
+}
+header .menu-bar-movil {
+  display: none;
+}
+
+.banner .container {
+  width: 90%;
+  align-items: center;
+  max-width: 1080px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.banner .container .texto-seccion {
+  padding-top: 5.5rem;
+}
+.banner .container .texto-seccion h1 {
+  text-align: center;
+  font-size: 4.5rem;
+  color: rgba(76, 209, 55, 0.9);
+  text-transform: uppercase;
+}
+.banner .container .slider {
+  overflow: hidden;
+  width: 40%;
+  margin: 0 auto;
+}
+.banner .container .slider figure {
+  position: relative;
+  width: 500%;
+  margin: 0 auto;
+  left: 0;
+  text-align: left;
+  font-size: 0;
+  animation: 30s slidy infinite;
+}
+.banner .container .slider figure img {
+  width: 20%;
+  float: left;
+}
+
+@keyframes slidy {
+  0% {
+    left: 0%;
+  }
+  20% {
+    left: 0%;
+  }
+  25% {
+    left: -100%;
+  }
+  45% {
+    left: -100%;
+  }
+  50% {
+    left: -200%;
+  }
+  70% {
+    left: -200%;
+  }
+  75% {
+    left: -300%;
+  }
+  95% {
+    left: -300%;
+  }
+  100% {
+    left: -400%;
+  }
+}
+.como-funciona {
+  padding-top: 4.5rem;
+  width: 90%;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+.como-funciona .container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.como-funciona .container .col-1 {
+  width: 50%;
+}
+.como-funciona .container .col-1 img {
+  width: 100%;
+  padding: 2rem;
+}
+.como-funciona .container .col-2 {
+  width: 50%;
+}
+.como-funciona .container .col-2 i {
+  background: rgba(46, 204, 113, 0.8);
+  color: #fff;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  font-size: 1.1rem;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.como-funciona .container .col-2 h2 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+.como-funciona .container .col-2 p {
+  text-align: justify;
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+.como-funciona .container .col-2 .tabla {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.como-funciona .container .col-2 .tabla div {
+  width: 50%;
+}
+.como-funciona .container .col-2 .tabla div i {
+  background: rgba(46, 204, 113, 0.8);
+  color: #fff;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.como-funciona .container .col-2 .tabla div p {
+  margin-left: 2.1rem;
+  margin-right: 2.1rem;
+  font-size: 0.8rem;
+  text-align: justify;
+}
+
+.descargas {
+  background: #7777;
+  margin-top: -7px;
+}
+.descargas h2 {
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 2.5rem;
+}
+.descargas .enlaces {
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.descargas .enlaces a {
+  display: flex;
+  width: 200px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  border: 2px solid #222;
+  background: #222;
+  margin-top: 1.4rem;
+  margin-right: 1.65rem;
+  border-radius: 2.5px;
+  padding: 0.29rem;
+  margin-left: 1.65rem;
+  transition: all 0.4s ease;
+  transform: scale(1);
+}
+.descargas .enlaces a:hover {
+  transform: scale(1.085);
+}
+.descargas .enlaces a i.fa-google-play {
+  width: 30%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-size: 1.5rem;
+}
+.descargas .enlaces a i.fa-apple {
+  width: 30%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-size: 2rem;
+}
+.descargas .enlaces a p {
+  width: 70%;
+  font-size: 0.8rem;
+}
+.descargas .enlaces a p span {
+  font-size: 1.3rem;
+}
+
+.pasos {
+  padding-bottom: 4.5rem;
+}
+.pasos h3 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.pasos .container {
+  width: 90%;
+  max-width: 1080px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.pasos .container .col-der {
+  width: 50%;
+}
+.pasos .container .col-der img {
+  width: 100%;
+}
+.pasos .container .col-izq {
+  width: 50%;
+  align-self: center;
+}
+.pasos .container .col-izq .cards {
+  height: 110px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  margin-bottom: 2rem;
+}
+.pasos .container .col-izq .cards:last-child {
+  margin-bottom: 0;
+}
+.pasos .container .col-izq .cards span {
+  padding: 1.5rem;
+  color: #fff;
+  border-radius: 3px;
+  width: 30px;
+  height: 30px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  transform: scale(1);
+  transition: all 0.12s ease-in-out;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+.pasos .container .col-izq .cards span:hover {
+  transform: scale(1.075);
+}
+.pasos .container .col-izq .cards div {
+  margin-left: 2rem;
+  margin-right: 4rem;
+}
+.pasos .container .col-izq .cards div h2 {
+  font-size: 1.4rem;
+}
+.pasos .container .col-izq .cards div p {
+  text-align: justify;
+}
+
+figure {
+  width: 100%;
+  background: url(../img/fondo-frutas.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 300px;
+}
+
+footer {
+  box-shadow: 5px 5px 5px #999;
+  color: #fff;
+  background: #222;
+}
+footer .container {
+  width: 90%;
+  max-width: 1080px;
+  margin: 0 auto;
+}

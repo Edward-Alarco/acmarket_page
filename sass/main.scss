@@ -87,7 +87,7 @@ header{
                     color: #fff;
                     transition: all .5s ease;
                     &:hover{
-                        color: #e74c3c;
+                        color: rgba($color: #fff, $alpha: 0.75);
                     }
                 }
             }
@@ -132,11 +132,14 @@ header{
                             &.fa-instagram:hover{
                                 color: #E4405F;
                             }
-                            &.fa-twitter:hover{
-                                color: #1DA1F2;
+                            &.fa-youtube:hover{
+                                color: #ff0000;
                             }
                             &.fa-facebook-f:hover{
-                                color: #ccc;
+                                color: #1877f2;
+                            }
+                            &.fa-whatsapp:hover{
+                                color: #25d366;
                             }
                         }
                     }
@@ -176,7 +179,7 @@ header{
                 left: 0;
                 text-align: left;
                 font-size: 0;
-                animation: 12s slidy infinite;
+                animation: 2s slidy infinite;
                 img{
                     width: 20%;
                     float: left;
@@ -779,6 +782,9 @@ footer{
     .blog .container{
         padding: 0 2.2rem;
     }
+    .blog .container .row-custom{
+        margin-bottom: 2rem;
+    }
 }
 
 @media all and (max-width: 574px){
@@ -832,6 +838,9 @@ footer{
     }
     .descargas .enlaces a{
         margin: 0 auto;
+    }
+    .blog .container .row-custom{
+        margin-bottom: 2rem;
     }
 }
 

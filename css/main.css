@@ -88,7 +88,7 @@ header .menu-bar-movil .menu-despegable #cerrar .fa-times {
   transition: all 0.5s ease;
 }
 header .menu-bar-movil .menu-despegable #cerrar .fa-times:hover {
-  color: #e74c3c;
+  color: rgba(255, 255, 255, 0.75);
 }
 header .menu-bar-movil .menu-despegable .menu-principal {
   text-align: center;
@@ -133,11 +133,14 @@ header .menu-bar-movil .menu-despegable .menu-principal .redes a i {
 header .menu-bar-movil .menu-despegable .menu-principal .redes a i.fa-instagram:hover {
   color: #E4405F;
 }
-header .menu-bar-movil .menu-despegable .menu-principal .redes a i.fa-twitter:hover {
-  color: #1DA1F2;
+header .menu-bar-movil .menu-despegable .menu-principal .redes a i.fa-youtube:hover {
+  color: #ff0000;
 }
 header .menu-bar-movil .menu-despegable .menu-principal .redes a i.fa-facebook-f:hover {
-  color: #ccc;
+  color: #1877f2;
+}
+header .menu-bar-movil .menu-despegable .menu-principal .redes a i.fa-whatsapp:hover {
+  color: #25d366;
 }
 
 .banner .container {
@@ -171,7 +174,7 @@ header .menu-bar-movil .menu-despegable .menu-principal .redes a i.fa-facebook-f
   left: 0;
   text-align: left;
   font-size: 0;
-  animation: 12s slidy infinite;
+  animation: 2s slidy infinite;
 }
 .banner .container .slider figure img {
   width: 20%;
@@ -810,6 +813,10 @@ footer .container .redes a p span {
   .blog .container {
     padding: 0 2.2rem;
   }
+
+  .blog .container .row-custom {
+    margin-bottom: 2rem;
+  }
 }
 @media all and (max-width: 574px) {
   .banner .container .texto-seccion h1 {
@@ -877,6 +884,10 @@ footer .container .redes a p span {
 
   .descargas .enlaces a {
     margin: 0 auto;
+  }
+
+  .blog .container .row-custom {
+    margin-bottom: 2rem;
   }
 }
 @media all and (max-width: 422px) {

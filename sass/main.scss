@@ -16,7 +16,21 @@ header{
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 0 5rem;
+        padding: 0 0 0 5rem;
+        span{
+            .logox{
+                width: 120px;
+                height: 120px;
+                margin-left: 5rem;
+                vertical-align: top;
+                transform: scale(1);
+                transition: all .1s ease-in;
+                cursor: pointer;
+                &:hover{
+                    transform: scale(1.02);
+                }
+            }
+        }
         a{
             text-decoration: none;
             color: #000;
@@ -160,7 +174,7 @@ header{
         flex-wrap: wrap;
         justify-content: center;
         .texto-seccion{
-            padding-top: 5.5rem;
+            padding-top: 3.5rem;
             h1{
                 text-align: center;
                 font-size: 4.5rem;
@@ -202,7 +216,8 @@ header{
     }
 
 .como-funciona{
-    padding-top: 4.5rem;
+    margin-bottom: -15rem;
+    padding-top: 0.5rem;
     width: 90%;
     max-width: 1080px;
     margin: 0 auto;
@@ -287,7 +302,6 @@ header{
         display: flex;
         a{
             display: flex;
-            width: 200px;
             justify-content: center;
             align-items: center;
             text-align: center;
@@ -295,8 +309,6 @@ header{
             color: #fff;
             flex-direction: row;
             flex-wrap: nowrap;
-            border: 2px solid #222;
-            background: #222;
             margin-top: 1.4rem;
             margin-right: 1.65rem;
             border-radius: 2.5px;
@@ -304,31 +316,17 @@ header{
             margin-left: 1.65rem;
             transition: all .4s ease;
             transform: scale(1);
+            width: 220px;
+            height: 80px;
+            img{
+                height: 100%;
+                width: 100%;
+                &.heicus{
+                    height: 80.02px !important;
+                }
+            }
             &:hover{
-                transform: scale(1.085);
-            }
-            i{
-                &.fa-google-play{
-                    width: 30%;
-                    justify-content: center;
-                    align-items: center;
-                    display: flex;
-                    font-size: 1.5rem;
-                }
-                &.fa-apple{
-                    width: 30%;
-                    justify-content: center;
-                    align-items: center;
-                    display: flex;
-                    font-size: 2rem;
-                }
-            }
-            p{
-                width: 70%;
-                font-size: 0.8rem;
-                span{
-                    font-size: 1.3rem;
-                }
+                transform: scale(1.05);
             }
         }
     }    
@@ -416,6 +414,48 @@ figure{
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
+        .enlace-whatsapp{
+            display: block;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            cursor: auto;
+            img{
+                display: block;
+                margin: 0 auto;
+                transform: scale(0.25);
+                cursor: pointer;
+                width: 100%;
+            }
+            div{
+                margin: 0 auto;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                text-decoration: none;
+                i{
+                    width: 30px;
+                    height: 30px;
+                    background: transparent;
+                    border-radius: 50%;
+                    border: 2px solid #25d366;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: #25d366;
+                    text-decoration: none;
+                }
+                p{
+                    text-decoration: none;
+                    bottom: 2px solid #25d366;
+                    color: #000;
+                    border-left: none;
+                }
+            }
+        }
         .row-custom{
             margin: 0 auto;
             display: block;
@@ -635,6 +675,9 @@ footer{
 /*----------- MEDIA QUERIES -----------*/
 
 @media all and (max-width: 1120px){
+    .logox{
+        display: none;
+    }
     header .menu-bar-pc{
         padding: 0 2rem;
     }
@@ -788,6 +831,10 @@ footer{
 }
 
 @media all and (max-width: 574px){
+    .blog .container .enlace-whatsapp img{
+        transform: scale(0.35);
+        margin-bottom: -1rem !important;
+    }
     .banner .container .texto-seccion h1{
         font-size: 2rem;
     }

@@ -43,7 +43,102 @@ header .menu-bar-pc a h2 {
   font-size: 1.8rem;
 }
 header .menu-bar-movil {
+  top: 0;
+  min-height: 6rem;
+  padding: 0 5rem;
+  left: 0;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  width: 100%;
+  flex-direction: row;
   display: none;
+}
+header .menu-bar-movil a {
+  text-decoration: none;
+  color: #000;
+}
+header .menu-bar-movil a h2 {
+  font-size: 1.3rem;
+}
+header .menu-bar-movil a .fa-hamburger {
+  color: #000;
+  font-size: 1.3rem;
+}
+header .menu-bar-movil .menu-despegable {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  z-index: 9;
+  top: 0;
+  right: 0%;
+  /*al 0% w Js*/
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.4s ease-out;
+  background: #0be881;
+}
+header .menu-bar-movil .menu-despegable #cerrar .fa-times {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 2rem;
+  color: #fff;
+  transition: all 0.5s ease;
+}
+header .menu-bar-movil .menu-despegable #cerrar .fa-times:hover {
+  color: #e74c3c;
+}
+header .menu-bar-movil .menu-despegable .menu-principal {
+  text-align: center;
+}
+header .menu-bar-movil .menu-despegable .menu-principal a {
+  display: block;
+  margin: 1.8rem auto;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+  position: relative;
+}
+header .menu-bar-movil .menu-despegable .menu-principal a:hover::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  background: #fff;
+  transform: translateX(-50%);
+  height: 3px;
+  width: 30px;
+}
+header .menu-bar-movil .menu-despegable .menu-principal .redes {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+}
+header .menu-bar-movil .menu-despegable .menu-principal .redes a {
+  text-decoration: none;
+  margin: 0 1rem;
+}
+header .menu-bar-movil .menu-despegable .menu-principal .redes a i {
+  font-size: 20px;
+  color: #fff;
+  transition: all 0.4s ease;
+}
+header .menu-bar-movil .menu-despegable .menu-principal .redes a i.fa-instagram:hover {
+  color: #E4405F;
+}
+header .menu-bar-movil .menu-despegable .menu-principal .redes a i.fa-twitter:hover {
+  color: #1DA1F2;
+}
+header .menu-bar-movil .menu-despegable .menu-principal .redes a i.fa-facebook-f:hover {
+  color: #ccc;
 }
 
 .banner .container {
@@ -318,13 +413,293 @@ figure {
   height: 300px;
 }
 
+.blog {
+  background: #7777;
+}
+.blog .container {
+  width: 90%;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 5rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.blog .container .row-custom {
+  margin: 0 auto;
+  display: block;
+  margin-top: 4rem;
+  width: 94.5%;
+  height: 200px;
+  background: #222;
+  border-radius: 20px;
+}
+.blog .container .row-custom a {
+  text-decoration: none;
+}
+.blog .container .row-custom a .texto-seccion {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  transform: scale(1);
+  transition: all 0.3s ease-in;
+}
+.blog .container .row-custom a .texto-seccion:hover {
+  transform: scale(1.06);
+}
+.blog .container .row-custom a .texto-seccion .texto {
+  width: 100%;
+}
+.blog .container .row-custom a .texto-seccion .texto p {
+  color: rgba(153, 153, 153, 0.85);
+}
+.blog .container .row-custom a .texto-seccion .texto h2 {
+  text-transform: uppercase;
+}
+.blog .container .col {
+  width: 50%;
+}
+.blog .container .col .flip {
+  position: relative;
+}
+.blog .container .col .flip > .front,
+.blog .container .col .flip > .back {
+  display: block;
+  transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition-duration: 0.5s;
+  transition-property: transform, opacity;
+}
+.blog .container .col .flip > .front {
+  transform: rotateY(0deg);
+}
+.blog .container .col .flip > .back {
+  position: absolute;
+  opacity: 0;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  transform: rotateY(-180deg);
+}
+.blog .container .col .flip:hover > .front {
+  transform: rotateY(180deg);
+}
+.blog .container .col .flip:hover > .back {
+  opacity: 1;
+  transform: rotateY(0deg);
+}
+.blog .container .col .flip.flip-vertical > .back {
+  transform: rotateX(-180deg);
+}
+.blog .container .col .flip.flip-vertical:hover > .front {
+  transform: rotateX(180deg);
+}
+.blog .container .col .flip.flip-vertical:hover > .back {
+  transform: rotateX(0deg);
+}
+.blog .container .col .flip {
+  position: relative;
+  display: inline-block;
+  margin-right: 2px;
+  margin-bottom: 1em;
+  width: 400px;
+}
+.blog .container .col .flip > .front,
+.blog .container .col .flip > .back {
+  display: block;
+  color: white;
+  width: inherit;
+  background-size: cover !important;
+  background-position: center !important;
+  height: 220px;
+  padding: 1em 2em;
+  background: #313131;
+  border-radius: 10px;
+}
+.blog .container .col .flip > .front p,
+.blog .container .col .flip > .back p {
+  font-size: 0.9125rem;
+  line-height: 160%;
+  color: #999;
+}
+.blog .container .col .flip > .front a,
+.blog .container .col .flip > .back a {
+  bottom: 20px;
+  right: 20px;
+  text-decoration: none;
+  color: #fff;
+  position: absolute;
+}
+
 footer {
   box-shadow: 5px 5px 5px #999;
   color: #fff;
   background: #222;
 }
+footer h2 {
+  padding-top: 1rem;
+  font-weight: lighter;
+}
 footer .container {
-  width: 90%;
+  width: 80%;
   max-width: 1080px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-top: 1.5rem;
+  padding-bottom: 2.5rem;
+}
+footer .container .col1 {
+  width: 20%;
+}
+footer .container .col1 ul {
+  list-style: none;
+}
+footer .container .col1 ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+footer .container .col2 {
+  width: 20%;
+}
+footer .container .col2 ul {
+  list-style: none;
+}
+footer .container .col2 ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+footer .container .redes {
+  width: 60%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+footer .container .redes a {
+  height: 90px;
+  display: flex;
+  width: 200px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  flex-direction: row;
+  flex-wrap: wrap;
+  border: 2px solid #222;
+  background: #000;
+  box-shadow: 5px 5px 5px #222;
+  border-radius: 2.5px;
+  padding: 0.61rem;
+  transition: all 0.4s ease;
+  transform: scale(0.75);
+}
+footer .container .redes a:nth-child(1):hover {
+  transform: scale(0.79);
+}
+footer .container .redes a:nth-child(2):hover {
+  transform: scale(0.79);
+}
+footer .container .redes a i.fa-google-play {
+  width: 30%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-size: 1.5rem;
+}
+footer .container .redes a i.fa-apple {
+  width: 30%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-size: 2rem;
+}
+footer .container .redes a p {
+  width: 70%;
+  font-size: 0.8rem;
+}
+footer .container .redes a p span {
+  font-size: 1.3rem;
+}
+
+/*----------- MEDIA QUERIES -----------*/
+@media all and (max-width: 1120px) {
+  header .menu-bar-pc {
+    padding: 0 2rem;
+  }
+
+  header .menu-bar-pc a {
+    margin-right: 0.7rem;
+  }
+
+  .banner .container .texto-seccion h1 {
+    font-size: 3.8rem;
+  }
+
+  .descargas h2 {
+    font-size: 2.2rem;
+  }
+
+  .blog .container {
+    width: 100%;
+  }
+}
+@media all and (max-width: 968px) {
+  .pasos .container .col-izq .cards div h2 {
+    font-size: 1.1rem;
+  }
+
+  .pasos .container .col-izq .cards div p {
+    font-size: 0.9rem;
+  }
+
+  .pasos .container .col-izq .cards div {
+    margin-left: 1rem;
+    margin-right: 3rem;
+  }
+
+  .pasos h3 {
+    font-size: 1.6rem;
+  }
+
+  .como-funciona .container .col-2 {
+    width: 55%;
+  }
+
+  .como-funciona .container .col-1 {
+    width: 45%;
+  }
+
+  .como-funciona .container .col-2 .tabla div p {
+    margin-left: 0;
+  }
+
+  .como-funciona .container .col-2 h2 {
+    font-size: 1.3rem;
+  }
+
+  .blog .container .col .flip {
+    transform: scale(0.8);
+  }
+
+  .salto {
+    display: none;
+  }
+
+  .blog .container .row-custom {
+    margin-top: 2.2rem;
+  }
+
+  .blog .container .col {
+    align-self: center;
+  }
+
+  .banner .container .texto-seccion h1 {
+    font-size: 3rem;
+  }
 }

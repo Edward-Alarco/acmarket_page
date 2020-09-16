@@ -51,7 +51,6 @@ header{
         left: 0;
         justify-content: space-between;
         align-items: center;
-        display: flex;
         width: 100%;
         flex-direction: row;
         display: none;
@@ -72,7 +71,7 @@ header{
             position: fixed;
             z-index: 9;
             top: 0;
-            right: 0%; /*al 0% w Js*/
+            right: -100%; /*al 0% w Js*/
             text-align: center;
             display: flex;
             justify-content: center;
@@ -177,7 +176,7 @@ header{
                 left: 0;
                 text-align: left;
                 font-size: 0;
-                animation: 30s slidy infinite;
+                animation: 12s slidy infinite;
                 img{
                     width: 20%;
                     float: left;
@@ -694,5 +693,241 @@ footer{
 }
 
 @media all and (max-width: 890px){
-    
+    header .menu-bar-pc{
+        display: none !important;
+    }
+    header .menu-bar-movil{
+        display: flex !important;
+    }
+    .banner .container .slider figure{
+        height: 200px;
+    }
+    .banner .container .texto-seccion h1{
+    font-size: 2.75rem;
+    }
+    .descargas .enlaces a{
+        margin-top: 1rem;
+        margin-left: 1.1rem;
+        margin-right: 1.1rem;
+    }
+    .pasos .container .col-izq .cards{
+        margin-bottom: 0.8rem;
+    }
+    .como-funciona .container .col-1{
+        width: 100%;
+    }
+    .como-funciona .container .col-2{
+        width: 100%;
+    }
+    .como-funciona .container .col-1 img{
+        display: block;
+        padding: 0;
+        margin: 0 auto;
+        width: 50%;
+    }
+    .blog .container .col .flip{
+        width: 100%;
+    }
+    footer .container .redes a{
+        padding: 0;
+    }
+    footer .container .redes{
+        margin-top: 2rem;
+        width: 100%;
+    }
+    footer .container .col1, footer .container .col2{
+        width: 50%;
+        text-align: center;
+    }
+    .blog .container .col{
+        width: 100%;
+    }
 }
+
+@media all and (max-width: 697px){
+    .pasos .container .col-izq, .pasos .container .col-der{
+        width: 100%;
+    }
+    .pasos .container .col-der img{
+        display: block;
+        margin: 0 auto;
+        width: 60%;
+    }
+    .pasos .container .col-izq .cards{
+        margin-bottom: 0;
+    }
+    header .menu-bar-movil{
+        padding: 0 3.5rem;
+    }
+    header .menu-bar-movil a .fa-hamburger{
+        font-size: 1.5rem;
+    }
+    .banner .container .texto-seccion h1{
+        font-size: 2.4rem;
+    }
+    .banner .container .texto-seccion{
+        padding-top: 2.5rem;
+    }
+    .descargas .enlaces a{
+        margin-top: 1rem;
+        margin-left: 0.85rem;
+        margin-right: 0.85rem;
+    }
+    .pasos .container .col-izq .cards div{
+        margin-left: 3rem;
+    }
+    .blog .container{
+        padding: 0 2.2rem;
+    }
+}
+
+@media all and (max-width: 574px){
+    .banner .container .texto-seccion h1{
+        font-size: 2rem;
+    }
+    .pasos .container .col-der img, .como-funciona .container .col-1 img{
+        width: 45%;
+    }
+    .como-funciona .container .col-2 p{
+        margin-bottom: 1.5rem;
+    }
+    .blog .container .row-custom a .texto-seccion .texto p{
+        font-size: 0.8rem;
+    }
+    .blog .container .row-custom a .texto-seccion .texto h2{
+        font-size: 1rem;
+    }
+    .blog .container .row-custom a .texto-seccion .texto{
+        padding: 1.5rem;
+    }
+    .descargas h2{
+        font-size: 1.5rem;
+    }
+    .descargas .enlaces a{
+        margin-left: 0;
+        transform: scale(0.8);
+        margin-right: 0;
+    }
+    .pasos .container .col-izq .cards div h2{
+        font-size: 0.9rem;
+    }
+    .pasos .container .col-izq .cards div p{
+        font-size: 0.75rem;
+    }
+    .pasos .container .col-izq .cards div{
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+    .como-funciona .container .col-1 img{
+        margin-bottom: 1.25rem;
+    }
+    .banner{
+        margin-bottom: 3rem;
+    }
+    .banner .container .slider figure{
+        height: 158px;
+    }
+    .descargas .enlaces{
+        display: block !important;
+    }
+    .descargas .enlaces a{
+        margin: 0 auto;
+    }
+}
+
+@media all and (max-width: 422px){
+    footer .container .redes{
+        display: block;
+    }
+    footer .container .redes a{
+        margin: 0 auto !important;
+    }
+    .descargas .enlaces a{
+        margin: 0 auto !important;
+    }
+    .banner .container .texto-seccion h1{
+        font-size: 1.6rem;
+    }
+    .descargas h2{
+        font-size: 1.5rem;
+    }
+    .descargas .enlaces a{
+        margin-top: 0.6rem;
+        margin-left: 0.4rem;
+        margin-right: 0.4rem;
+        transform: scale(0.8);
+    }
+    .como-funciona .container .col-2 .tabla div{
+        width: 100%;
+    }
+    .blog .container .col .flip{
+        transform: scale(0.95);
+    }
+    .flip{
+       &.xcustom{
+        height: 209px !important;
+        }
+    }
+    .col{
+        &.colcustom{
+            height: 290px !important;
+        }
+    }
+    .blog .container .col .flip > .front p, .blog .container .col .flip > .back p{
+        font-size: 0.825rem;
+    }
+    .blog .container .row-custom{
+        margin-bottom: 2rem;
+    }
+    .blog .container .row-custom{
+        margin-top: 0.5rem;
+    }
+    .descargas .enlaces a{
+        margin-top: 0.25rem;
+    }
+    .como-funciona .container .col-1 img{
+        padding: 0;
+    }
+    .descargas .enlaces a{
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .descargas .enlaces a{
+        width: 225px;
+    }
+    header .menu-bar-movil{
+        padding: 0 1rem;
+    }
+    .banner .container .texto-seccion h1{
+        font-size: 1.25rem;
+    }
+    .descargas h2{
+        font-size: 1.1rem;
+    }
+    .pasos h3{
+        font-size: 1.1rem;
+    }
+    .blog .container{
+        padding: 0 1.25rem;
+    }
+    .blog .container .col{
+        margin-top: 1.5rem;
+    }
+    .blog .container .row-custom{
+        margin-top: 0 !important;
+    }
+    .banner .container .slider figure{
+        height: 100px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+

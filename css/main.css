@@ -155,6 +155,9 @@ header .menu-bar-movil .menu-despegable .menu-principal .redes a i.fa-whatsapp:h
   color: #25d366;
 }
 
+.banner {
+  margin-bottom: 5rem;
+}
 .banner .container {
   width: 90%;
   align-items: center;
@@ -167,6 +170,7 @@ header .menu-bar-movil .menu-despegable .menu-principal .redes a i.fa-whatsapp:h
 }
 .banner .container .texto-seccion {
   padding-top: 3.5rem;
+  width: 100%;
 }
 .banner .container .texto-seccion h1 {
   text-align: center;
@@ -174,54 +178,32 @@ header .menu-bar-movil .menu-despegable .menu-principal .redes a i.fa-whatsapp:h
   color: rgba(76, 209, 55, 0.9);
   text-transform: uppercase;
 }
-.banner .container .slider {
+
+.container-fluid {
+  width: 25%;
   overflow: hidden;
-  width: 40%;
   margin: 0 auto;
 }
-.banner .container .slider figure {
-  position: relative;
-  width: 500%;
-  margin: 0 auto;
-  left: 0;
-  text-align: left;
-  font-size: 0;
-  animation: 2s slidy infinite;
+.container-fluid .slider {
+  width: 300%;
+  display: flex;
 }
-.banner .container .slider figure img {
-  width: 20%;
-  float: left;
+.container-fluid .slider .slide {
+  width: 100%;
+  min-height: 300px;
+  background-size: cover;
+  background-position: center;
+}
+.container-fluid .slider .slide.foto1 {
+  background: url("../img/slider/ejemplo1.jpg");
+}
+.container-fluid .slider .slide.foto2 {
+  background: url("../img/slider/ejemplo2.jpg");
+}
+.container-fluid .slider .slide.foto3 {
+  background: url("../img/slider/ejemplo3.jpg");
 }
 
-@keyframes slidy {
-  0% {
-    left: 0%;
-  }
-  20% {
-    left: 0%;
-  }
-  25% {
-    left: -100%;
-  }
-  45% {
-    left: -100%;
-  }
-  50% {
-    left: -200%;
-  }
-  70% {
-    left: -200%;
-  }
-  75% {
-    left: -300%;
-  }
-  95% {
-    left: -300%;
-  }
-  100% {
-    left: -400%;
-  }
-}
 .como-funciona {
   margin-bottom: -15rem;
   padding-top: 0.5rem;
@@ -671,6 +653,10 @@ footer .container .redes a p span {
 
 /*----------- MEDIA QUERIES -----------*/
 @media all and (max-width: 1120px) {
+  .container-fluid {
+    width: 40%;
+  }
+
   .logox {
     display: none;
   }
@@ -812,8 +798,20 @@ footer .container .redes a p span {
   .blog .container .col {
     width: 100%;
   }
+
+  .container-fluid {
+    width: 50%;
+  }
+
+  .banner .container .texto-seccion h1 {
+    margin-bottom: 3.5rem;
+  }
 }
 @media all and (max-width: 697px) {
+  .container-fluid {
+    width: 60%;
+  }
+
   .pasos .container .col-izq, .pasos .container .col-der {
     width: 100%;
   }
